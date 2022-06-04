@@ -48,10 +48,10 @@ export default {
       title: 'Vuetify.js'
     }
   },
-  mounted () {
+  created () {
     // Preloader
     $(window).on('load', function (event) {
-      $('.preloader').delay(100).fadeOut(200)
+      $('.preloader').delay(30).fadeOut(50)
     })
 
     // WOW

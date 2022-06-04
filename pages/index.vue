@@ -31,6 +31,14 @@ import TheTestimonials from '~/components/TheTestimonials'
 import ThePosts from '~/components/ThePosts'
 import TheFooter from '~/components/TheFooter'
 import BackToTopButton from '~/components/BackToTopButton'
+import { BlipChat } from "blip-chat-widget";
+
+new BlipChat()
+  .withAppKey("ZmFpcmN5Y2xlOmNiNzkyYjMzLTJlMzMtNDhkZi04NDRiLWI0YWZmMTAzODJhOQ==")
+  .withButton({"color":"#2CC3D5","icon":""})
+  .withTarget('page-wrap')
+  .build();
+
 // Animate CSS
 import 'animate.css'
 // Bootstrap CSS
