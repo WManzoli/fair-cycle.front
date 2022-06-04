@@ -3,15 +3,24 @@
     <div id="home" class="header-hero bg_cover">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="header-hero-content text-center">
-              <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-                Basic - SaaS
-                Landing Page
-              </h3>
+          <div class="col-lg-12">
+            <div class="header-hero-content">
+              <section class="wrapper">
+                <h2 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                  <div class="rw-words rw-words-2">
+                    <div>
+                      Precisando de
+                      <span>&nbsp;</span>
+                      <span>segurança?</span>
+                      <span>manutenção?</span>
+                      <span>garagem?</span>
+                      <span>atendimento?</span>&nbsp;
+                    </div>
+                  </div>
+                </h2>
+              </section>
               <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-                Kickstart Your SaaS
-                or App Site
+                A Fair Cycle pode te ajudar !
               </h2>
               <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
                 Lorem ipsum dolor sit amet,
@@ -43,11 +52,67 @@ import Particles from 'particles.vue'
 import Vue from 'vue'
 Vue.use(Particles)
 
-export default {}
+export default {
+  // data() {
+  //   return {
+  //     // currentWord: '',
+  //     // currentWordArray: ['Segurança', 'Atendimento', 'Manutenção', 'Garagem']
+  //   }
+  // },
+  // created(){
+  // },
+  // methods:{
+  // },
+}
 </script>
 
 <style scoped>
 .bg_cover {
   background-image: url('~assets/basic/assets/images/banner-bg.svg');
+}
+.wrapper{
+  display: flex;
+  width: 100%;
+  font-size : 4vh;
+}
+.rw-words span{
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  /* color: black; */
+  /* background-color:black; */
+}
+.rw-sentence span{
+  color: #444;
+  white-space: nowrap;
+  font-size: 200%;
+  font-weight: normal;
+}
+.rw-words-2 span{
+  animation: rotateWordsSecond 8s linear infinite 0s;
+}
+.rw-words span:nth-child(2) {
+  animation-delay: 2s;
+  color: #fff;
+}
+.rw-words span:nth-child(3) {
+  animation-delay: 4s;
+  color: #fff;
+}
+.rw-words span:nth-child(4) {
+  animation-delay: 6s;
+  color: #fff;
+}
+.rw-words span:nth-child(5) {
+  animation-delay: 8s;
+  color: #fff;
+}
+@keyframes rotateWordsSecond {
+  0% { opacity: 2; animation-timing-function: ease-out; width: 0px; }
+  10% { opacity: 1; width: 20%; }
+  20% { opacity: 1; width: 30%; }
+  27% { opacity: 0; width: 50%; }
+  /* 100% { opacity: 0; } */
 }
 </style>

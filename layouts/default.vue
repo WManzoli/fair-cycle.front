@@ -1,23 +1,23 @@
 <template>
-  <div>
-    <div class="preloader">
-      <div class="loader">
-        <div class="ytp-spinner">
-          <div class="ytp-spinner-container">
-            <div class="ytp-spinner-rotator">
-              <div class="ytp-spinner-left">
-                <div class="ytp-spinner-circle" />
-              </div>
-              <div class="ytp-spinner-right">
-                <div class="ytp-spinner-circle" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--  <div>-->
+<!--    <div class="preloader">-->
+<!--      <div class="loader">-->
+<!--        <div class="ytp-spinner">-->
+<!--          <div class="ytp-spinner-container">-->
+<!--            <div class="ytp-spinner-rotator">-->
+<!--              <div class="ytp-spinner-left">-->
+<!--                <div class="ytp-spinner-circle" />-->
+<!--              </div>-->
+<!--              <div class="ytp-spinner-right">-->
+<!--                <div class="ytp-spinner-circle" />-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
     <nuxt />
-  </div>
+<!--  </div>-->
 </template>
 
 <script>
@@ -51,11 +51,13 @@ export default {
   created () {
     // Preloader
     $(window).on('load', function (event) {
-      $('.preloader').delay(30).fadeOut(50)
+      $('.preloader').delay(100).fadeOut(200)
     })
 
     // WOW
-    const wow = new WOW()
+    const wow = new WOW(
+      {live: false}
+    )
     wow.init()
   }
 }
