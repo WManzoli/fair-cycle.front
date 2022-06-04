@@ -37,6 +37,7 @@ new BlipChat()
   .withAppKey("ZmFpcmN5Y2xlOmNiNzkyYjMzLTJlMzMtNDhkZi04NDRiLWI0YWZmMTAzODJhOQ==")
   .withButton({"color":"#2CC3D5","icon":""})
   .withTarget('page-wrap')
+  .withCustomCommonUrl('https://chat.blip.ai/')
   .build();
 
 // Animate CSS
