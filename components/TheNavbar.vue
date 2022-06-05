@@ -5,7 +5,7 @@
         <div class="row  ">
           <div class="w-100 py-2 ">
             <nav class="d-flex justify-content-between">
-              <h1 class="navbar-brand" href="index.html">
+              <h1 class="navbar-brand d-flex align-items-center justify-content-center text-center" href="index.html">
                 <img style="width: 3rem" src="~/assets/basic/assets/images/logo.png" alt="Logo">&nbsp;- Fair Cycle
               </h1>
 
