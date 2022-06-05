@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  <img alt="move.it" title="move.it" width="100px" src="http://localhost:3000/_nuxt/assets/basic/assets/images/logo.png" />
+  <img alt="fair cycle logo" title="fair cycle" width="100px" src="https://i.ibb.co/4Yyxd9X/logo.png" />
 </h1>
 
 <p align="center">
