@@ -1,63 +1,86 @@
 <template>
-  <section class="about-area pt-70">
-    <div class="about-shape-2">
-      <img src="~/assets/basic/assets/images/about-shape-2.svg" alt="shape">
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6" :class="{ 'order-lg-last': right }">
-          <div
-            class="about-content mt-50 wow"
-            :class="[right ? 'fadeInRight' : 'fadeInLeft']"
-            data-wow-duration="1s"
-            data-wow-delay="0.3s"
-          >
-            <div class="section-title">
-              <div class="line" />
-              <h3 class="title">
-                {{ title }}
-              </h3>
-            </div> <!-- section title -->
-            <p class="text">
-              {{ content }}
-            </p>
-            <a href="#" class="main-btn">Try it Free</a>
-          </div> <!-- about content -->
-        </div>
-        <div class="col-lg-6" :class="{ 'order-lg-first': right }">
-          <div
-            class="about-image text-center mt-50 wow"
-            :class="[right ? 'fadeInLeft' : 'fadeInRight']"
-            data-wow-duration="1s"
-            data-wow-delay="0.5s"
-          >
-            <img :src="img" :alt="title">
-          </div> <!-- about image -->
-        </div>
-      </div> <!-- row -->
-    </div> <!-- container -->
-  </section>
+  <header class="header-area" style="background: #c5c5c5">
+    <div id="home" class="header-hero bg_cover">
+      <div class="container" style="min-height: 100vh;">
+        <v-card class=" mt-100">
+          <v-card-title>
+            Registro de Atendimento
+          </v-card-title>
+          <v-card-subtitle>
+            Atenção ao preencher os campos.
+          </v-card-subtitle>
+          <form class="px-3 py-4">
+            <v-text-field
+              prepend-icon="mdi-account"
+              type="text"
+              placeholder="Nome do Dono"
+              required
+            />
+            <v-text-field
+              prepend-icon="mdi-bike"
+              type="text"
+              placeholder="Marca da bicicleta"
+              required
+            />
+            <v-text-field
+              prepend-icon="mdi-matrix"
+              type="text"
+              placeholder="Numero de série"
+              required
+            />
+            <v-text-field
+              prepend-icon="mdi-text"
+              type="text"
+              placeholder="Descrição do serviço"
+              required
+            />
+            <v-file-input
+              prepend-icon="mdi-file"
+              counter
+              multiple
+              show-size
+              truncate-length="50"
+            />
+            <span
+              class="d-flex align-items-baseline mb-4"
+            >
+              <v-checkbox
+                class="px-2"
+                color="red"
+                value="red"
+                hide-details
+              /><span>Declaro que li e concordo com os as informações citadas acima.</span>
+            </span>
+            <v-btn>
+              Enviar
+            </v-btn>
+            <v-btn @click="$router.push('/home')">
+              Cancelar
+            </v-btn>
+          </form>
+        </v-card>
+      </div> <!-- container -->
+    </div> <!-- header hero -->
+  </header>
 </template>
 
 <script>
+
 export default {
-  props: {
-    right: Boolean,
-    title: {
-      type: String,
-      default: 'About'
-    },
-    img: {
-      type: String,
-      default: require('~/assets/basic/assets/images/about2.svg')
-    },
-    content: {
-      type: String,
-      default: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.'
+  data () {
+    return {
+      // currentWord: '',
+      // currentWordArray: ['Segurança', 'Atendimento', 'Manutenção', 'Garagem']
     }
   },
-  data () {
-    return {}
+  methods: {
+    handleClick () {
+      window.setTimeout(function () { window.blipClient.toogleChat() })
+    }
   }
 }
 </script>
+
+<style scoped>
+
+</style>
