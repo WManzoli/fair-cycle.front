@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12">
-            <div class="header-hero-content pb-200">
+            <div class="header-hero-content">
               <section class="wrapper">
                 <h2 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
                   <div class="rw-words rw-words-2">
@@ -40,6 +40,101 @@
           </div>
         </div> <!-- row -->
       </div> <!-- container -->
+      <div class="d-flex pb-50">
+        <v-card
+          elevation="24"
+          max-width="25%"
+          class="mx-auto"
+        >
+          <v-list two-line>
+            <v-list-item>
+              <v-list-item-avatar class="bg-success">
+                <v-icon>mdi-parking</v-icon>
+              </v-list-item-avatar>
+              <v-list-item-content class="pl-2">
+                <v-list-item-title>Estacionamentos</v-list-item-title>
+                <v-list-item-subtitle>Bike Friendly & 24/7</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+
+          <v-carousel
+            :show-arrows="false"
+            height="250px"
+          >
+            <v-carousel-item
+              v-for="(item,i) in items"
+              :key="i"
+              eager
+            >
+              <v-img :src="item.src" height="100%" eager />
+            </v-carousel-item>
+          </v-carousel>
+          <v-system-bar lights-out />
+        </v-card>
+        <v-card
+          elevation="24"
+          max-width="25%"
+          class="mx-auto"
+        >
+          <v-list two-line>
+            <v-list-item>
+              <v-list-item-avatar class="bg-warning">
+                <v-icon>mdi-parking</v-icon>
+              </v-list-item-avatar>
+              <v-list-item-content class="pl-2">
+                <v-list-item-title>Bicicletarias</v-list-item-title>
+                <v-list-item-subtitle>Reparos e Trocas</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+
+          <v-carousel
+            :show-arrows="false"
+            height="250px"
+          >
+            <v-carousel-item
+              v-for="(item,i) in items"
+              :key="i"
+              eager
+            >
+              <v-img :src="item.src" height="100%" eager />
+            </v-carousel-item>
+          </v-carousel>
+          <v-system-bar lights-out />
+        </v-card>
+        <v-card
+          elevation="24"
+          max-width="25%"
+          class="mx-auto"
+        >
+          <v-list two-line>
+            <v-list-item>
+              <v-list-item-avatar class="bg-info">
+                <v-icon>mdi-parking</v-icon>
+              </v-list-item-avatar>
+              <v-list-item-content class="pl-2">
+                <v-list-item-title>Segurança</v-list-item-title>
+                <v-list-item-subtitle>Segurar bens e comercios</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+
+          <v-carousel
+            :show-arrows="false"
+            height="250px"
+          >
+            <v-carousel-item
+              v-for="(item,i) in items"
+              :key="i"
+              eager
+            >
+              <v-img :src="item.src" height="100%" eager />
+            </v-carousel-item>
+          </v-carousel>
+          <v-system-bar lights-out />
+        </v-card>
+      </div>
       <Particles
         id="particles-1"
         class="particles"
@@ -58,8 +153,29 @@ Vue.use(Particles)
 export default {
   data () {
     return {
-      // currentWord: '',
-      // currentWordArray: ['Segurança', 'Atendimento', 'Manutenção', 'Garagem']
+      colors: [
+        'green',
+        'secondary',
+        'yellow darken-4',
+        'red lighten-2',
+        'orange darken-1'
+      ],
+      items: [
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
+        },
+        {
+          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
+        }
+      ],
+      cycle: true,
+      slides: [
+        'https://cdn.vuetifyjs.com/images/john.png',
+        'https://cdn.vuetifyjs.com/images/john.png',
+        'https://cdn.vuetifyjs.com/images/john.png',
+        'https://cdn.vuetifyjs.com/images/john.png',
+        'https://cdn.vuetifyjs.com/images/john.png'
+      ]
     }
   },
   methods: {

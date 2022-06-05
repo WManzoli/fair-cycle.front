@@ -23,12 +23,12 @@
                   <v-list-item>
                     <v-list-item-avatar>
                       <img
-                        src="https://blipmediastore.blob.core.windows.net/public-medias/Media_3c9fe1e9-a50d-4f51-bc4e-a5e6122711e0"
+                        src="https://blipmediastore.blob.core.windows.net/public-medias/Media_facbbeb5-1e48-479e-b117-9c59138c6071"
                         alt="Fairzinho"
                       >
                     </v-list-item-avatar>
 
-                    <v-list-item-content class="pl-4">
+                    <v-list-item-content class="pl-2">
                       <v-list-item-title>Seja Bem-Vindo</v-list-item-title>
                       <v-list-item-subtitle>Att Fairzinho.</v-list-item-subtitle>
                     </v-list-item-content>

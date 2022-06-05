@@ -1,23 +1,19 @@
 <template>
   <div style="background: #fff;">
     <TheNavbar />
-    <TheProfile />
-    <!--    <TheFooter />-->
-    <!--    <BackToTopButton />-->
+    <ThePanel />
   </div>
 </template>
 
 <script>
 import { BlipChat } from 'blip-chat-widget'
 import TheNavbar from '@/components/TheNavbar'
-import TheProfile from '@/components/TheProfile'
-// import TheFooter from '@/components/TheFooter'
-// import BackToTopButton from '@/components/BackToTopButton'
+import ThePanel from '@/components/ThePanel'
 import '../../node_modules/animate.css/animate.css'
 
 window.blipClient = new BlipChat()
   .withAppKey('ZmFpcmN5Y2xlOmNiNzkyYjMzLTJlMzMtNDhkZi04NDRiLWI0YWZmMTAzODJhOQ==')
-  .withButton({ height: '200px', color: '#fff', icon: 'https://blipmediastore.blob.core.windows.net/public-medias/Media_3c9fe1e9-a50d-4f51-bc4e-a5e6122711e0' })
+  .withButton({ color: '#134f5cff', icon: 'https://blipmediastore.blob.core.windows.net/public-medias/Media_facbbeb5-1e48-479e-b117-9c59138c6071' })
   .withTarget('page-wrap')
   .withCustomCommonUrl('https://chat.blip.ai/')
 window.blipClient.build()
@@ -32,16 +28,12 @@ require('assets/basic/assets/css/style.css')
 export default {
   components: {
     TheNavbar,
-    TheProfile
-    // TheFooter,
-    // BackToTopButton
-
+    ThePanel
   },
   head () {
     return {
-      title: 'Home',
+      title: 'Painel',
       meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'Landing page'
           // name: 'description',
