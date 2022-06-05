@@ -4,51 +4,93 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <nav class="navbar navbar-expand-lg">
+            <nav class="d-flex justify-content-between">
               <h1 class="navbar-brand" href="index.html" :style="`color:`+logo">
-                <!--                <img :src="logo" alt="Logo">-->
-                FC - Fair Cycle
+                <img style="width: 6%" src="~/assets/basic/assets/images/logo.png" alt="Logo">&nbsp;- Fair Cycle
               </h1>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="toggler-icon" />
-                <span class="toggler-icon" />
-                <span class="toggler-icon" />
-              </button>
 
-              <!--              <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">-->
-              <!--                <ul id="nav" class="navbar-nav ml-auto">-->
-              <!--                  <li class="nav-item active">-->
-              <!--                    <a class="page-scroll" href="#home">Home</a>-->
-              <!--                  </li>-->
-              <!--                  <li class="nav-item">-->
-              <!--                    <a class="page-scroll" href="#features">Features</a>-->
-              <!--                  </li>-->
-              <!--                  <li class="nav-item">-->
-              <!--                    <a class="page-scroll" href="#about">About</a>-->
-              <!--                  </li>-->
-              <!--                  <li class="nav-item">-->
-              <!--                    <a class="page-scroll" href="#facts">Why</a>-->
-              <!--                  </li>-->
-              <!--                  <li class="nav-item">-->
-              <!--                    <a class="page-scroll" href="#team">Team</a>-->
-              <!--                  </li>-->
-              <!--                  <li class="nav-item">-->
-              <!--                    <a class="page-scroll" href="#blog">Blog</a>-->
-              <!--                  </li>-->
-              <!--                </ul>-->
-              <!--              </div> &lt;!&ndash; navbar collapse &ndash;&gt;-->
+              <div class="">
+                <p v-if="$route.fullPath !== '/painel' " class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s" @click="isModalVisible = !isModalVisible">
+                  Entrar
+                </p>
+                <p v-else-if="$route.fullPath !== '/home' && !isModalVisible" class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s" @click="$router.push('/home')">
+                  Sair
+                </p>
+              </div>
 
-              <!--              <div class="navbar-btn d-none d-sm-inline-block">-->
-              <!--                <a class="main-btn" data-scroll-nav="0" href="#pricing">Free Trial</a>-->
-              <!--              </div>-->
+              <v-card v-if="isModalVisible" class="mr-3 mt-1 login-modal" @mouseleave="isModalVisible = !isModalVisible">
+                <v-list>
+                  <v-list-item>
+                    <v-list-item-avatar>
+                      <img
+                        src="https://blipmediastore.blob.core.windows.net/public-medias/Media_3c9fe1e9-a50d-4f51-bc4e-a5e6122711e0"
+                        alt="Fairzinho"
+                      >
+                    </v-list-item-avatar>
+
+                    <v-list-item-content class="pl-4">
+                      <v-list-item-title>Seja Bem-Vindo</v-list-item-title>
+                      <v-list-item-subtitle>Att Fairzinho.</v-list-item-subtitle>
+                    </v-list-item-content>
+
+                    <!--                    <v-list-item-action>-->
+                    <!--                      <v-btn-->
+                    <!--                        :class="fav ? 'red&#45;&#45;text' : ''"-->
+                    <!--                        icon-->
+                    <!--                        @click="fav = !fav"-->
+                    <!--                      >-->
+                    <!--                        <v-icon>mdi-heart</v-icon>-->
+                    <!--                      </v-btn>-->
+                    <!--                    </v-list-item-action>-->
+                  </v-list-item>
+                </v-list>
+
+                <v-divider />
+
+                <v-list>
+                  <v-list-item>
+                    <v-text-field
+                      v-model="user"
+                      :rules="rules"
+                      counter
+                      maxlength="25"
+                      type="text"
+                      label="Login"
+                    />
+                  </v-list-item>
+
+                  <v-list-item>
+                    <v-text-field
+                      v-model="password"
+                      :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+                      :rules="[rules.required, rules.min]"
+                      :type="show ? 'text' : 'password'"
+                      label="Senha"
+                      hint="Pelo menos 5 caracteres"
+                      counter
+                      @click:append="show = !show"
+                    />
+                  </v-list-item>
+                </v-list>
+
+                <v-card-actions>
+                  <v-spacer />
+
+                  <v-btn
+                    text
+                    @click="isModalVisible = false"
+                  >
+                    Voltar
+                  </v-btn>
+                  <v-btn
+                    color="primary"
+                    text
+                    @click="pushToRoute('/painel')"
+                  >
+                    Enviar
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
             </nav> <!-- navbar -->
           </div>
         </div> <!-- row -->
@@ -63,13 +105,25 @@ import $ from 'jquery'
 export default {
   data () {
     return {
-      scrolled: false
+      isModalVisible: false,
+      scrolled: false,
+      fav: true,
+      menu: false,
+      message: false,
+      hints: true,
+      show: false,
+      user: 'Admin',
+      password: '12345',
+      rules: {
+        required: value => !!value || 'Required.',
+        min: v => v.length >= 8 || 'Minimo de 5 caracteres'
+      }
     }
   },
   computed: {
     logo () {
       return this.scrolled ? '#000' : '#fff'
-      // return this.scrolled ? require('~/assets/basic/assets/images/logo-2.svg') : require('~/assets/basic/assets/images/logo.svg')
+      // return this.scrolled ? require('~/assets/basic/assets/images/logo-png') : require('~/assets/basic/assets/images/logo-png')
     }
   },
   mounted () {
@@ -77,6 +131,12 @@ export default {
     $(window).on('scroll', () => {
       this.scrolled = $(window).scrollTop() > 20
     })
+  },
+  methods: {
+    pushToRoute (value) {
+      this.$router.push(value)
+      this.isModalVisible = false
+    }
   }
 }
 </script>

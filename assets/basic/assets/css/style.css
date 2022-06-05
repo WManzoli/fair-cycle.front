@@ -741,6 +741,11 @@ p {
     -o-transform: translateY(-50%);
     transform: translateY(-50%); } }
 
+.login-modal{
+  position: absolute;
+  top: 60px;
+  right: 0px;
+}
 .navbar-btn .main-btn {
   height: 45px;
   line-height: 45px;
