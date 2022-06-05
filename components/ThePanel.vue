@@ -36,7 +36,7 @@
             />
             <v-file-input
               prepend-icon="mdi-file"
-              placeholder="Descrição do serviço"
+              placeholder="Arquivos"
               counter
               multiple
               show-size
