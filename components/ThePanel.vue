@@ -1,7 +1,7 @@
 <template>
   <header class="header-area" style="background: #c5c5c5">
     <div id="home" class="header-hero bg_cover">
-      <div class="container" style="min-height: 100vh;">
+      <div class="container" style="min-height: 90vh;">
         <v-card class=" mt-100">
           <v-card-title>
             Registro de Atendimento
@@ -36,6 +36,7 @@
             />
             <v-file-input
               prepend-icon="mdi-file"
+              placeholder="Descrição do serviço"
               counter
               multiple
               show-size
