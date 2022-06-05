@@ -3,7 +3,7 @@
     <div class="navbar-area" :class="{ sticky: scrolled }">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
+          <div class="w-100 pt-3">
             <nav class="d-flex justify-content-between">
               <h1 class="navbar-brand" href="index.html" :style="`color:`+logo">
                 <img style="width: 6%" src="~/assets/basic/assets/images/logo.png" alt="Logo">&nbsp;- Fair Cycle

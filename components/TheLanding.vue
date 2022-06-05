@@ -3,7 +3,7 @@
     <div id="home" class="header-hero bg_cover">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-12">
+          <div class="w-100">
             <div class="header-hero-content">
               <section class="wrapper">
                 <h2 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
@@ -33,7 +33,7 @@
           </div>
         </div> <!-- row -->
         <div class="row">
-          <div class="col-lg-12">
+          <div class="w-100">
             <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
               <!--              <img src="~/assets/basic/assets/images/header-hero.png" alt="hero">-->
             </div> <!-- header hero image -->
@@ -63,7 +63,7 @@
             height="250px"
           >
             <v-carousel-item
-              v-for="(item,i) in items"
+              v-for="(item,i) in items1"
               :key="i"
               eager
             >
@@ -94,7 +94,7 @@
             height="250px"
           >
             <v-carousel-item
-              v-for="(item,i) in items"
+              v-for="(item,i) in items2"
               :key="i"
               eager
             >
@@ -125,7 +125,7 @@
             height="250px"
           >
             <v-carousel-item
-              v-for="(item,i) in items"
+              v-for="(item,i) in items3"
               :key="i"
               eager
             >
@@ -160,12 +160,28 @@ export default {
         'red lighten-2',
         'orange darken-1'
       ],
-      items: [
+      items1: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
+          src: 'https://images.unsplash.com/photo-1587485715817-5e8c6fa2a903?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80'
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
+          src: 'https://images.unsplash.com/photo-1554135386-1a06027310a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80'
+        }
+      ],
+      items2: [
+        {
+          src: 'https://images.unsplash.com/photo-1607109181641-74f8e7f4eb11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80'
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1601067095185-b8b73ad7db10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1526&q=80'
+        }
+      ],
+      items3: [
+        {
+          src: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+        },
+        {
+          src: 'https://images.unsplash.com/photo-1637763723578-79a4ca9225f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80'
         }
       ],
       cycle: true,

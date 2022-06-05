@@ -744,7 +744,7 @@ p {
 .login-modal{
   position: absolute;
   top: 60px;
-  right: 0px;
+  right: 100px;
 }
 .navbar-btn .main-btn {
   height: 45px;
