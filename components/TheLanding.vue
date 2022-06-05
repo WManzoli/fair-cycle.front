@@ -39,102 +39,99 @@
             </div> <!-- header hero image -->
           </div>
         </div> <!-- row -->
+        <div class="d-flex pb-50 mx-auto " style="gap: 1rem;">
+          <v-card
+            elevation="24"
+            max-width="33%"
+          >
+            <v-list two-line>
+              <v-list-item>
+                <v-list-item-avatar class="bg-success">
+                  <v-icon>mdi-parking</v-icon>
+                </v-list-item-avatar>
+                <v-list-item-content class="pl-2">
+                  <v-list-item-title>Estacionamentos</v-list-item-title>
+                  <v-list-item-subtitle>Bike Friendly & 24/7</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+
+            <v-carousel
+              :show-arrows="false"
+              height="250px"
+            >
+              <v-carousel-item
+                v-for="(item,i) in items1"
+                :key="i"
+                eager
+              >
+                <v-img :src="item.src" height="100%" eager />
+              </v-carousel-item>
+            </v-carousel>
+            <v-system-bar lights-out />
+          </v-card>
+          <v-card
+            elevation="24"
+            max-width="33%"
+          >
+            <v-list two-line>
+              <v-list-item>
+                <v-list-item-avatar class="bg-warning">
+                  <v-icon>mdi-parking</v-icon>
+                </v-list-item-avatar>
+                <v-list-item-content class="pl-2">
+                  <v-list-item-title>Bicicletarias</v-list-item-title>
+                  <v-list-item-subtitle>Reparos e Trocas</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+
+            <v-carousel
+              :show-arrows="false"
+              height="250px"
+            >
+              <v-carousel-item
+                v-for="(item,i) in items2"
+                :key="i"
+                eager
+              >
+                <v-img :src="item.src" height="100%" eager />
+              </v-carousel-item>
+            </v-carousel>
+            <v-system-bar lights-out />
+          </v-card>
+          <v-card
+            elevation="24"
+            max-width="33%"
+          >
+            <v-list two-line>
+              <v-list-item>
+                <v-list-item-avatar class="bg-info">
+                  <v-icon>mdi-parking</v-icon>
+                </v-list-item-avatar>
+                <v-list-item-content class="pl-2">
+                  <v-list-item-title>Segurança</v-list-item-title>
+                  <v-list-item-subtitle>Segurar bens e comercios</v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+
+            <v-carousel
+              :show-arrows="false"
+              height="250px"
+            >
+              <v-carousel-item
+                v-for="(item,i) in items3"
+                :key="i"
+                eager
+              >
+                <v-img :src="item.src" height="100%" eager />
+              </v-carousel-item>
+            </v-carousel>
+            <v-system-bar lights-out />
+          </v-card>
+        </div>
       </div> <!-- container -->
-      <div class="d-flex pb-50">
-        <v-card
-          elevation="24"
-          max-width="25%"
-          class="mx-auto"
-        >
-          <v-list two-line>
-            <v-list-item>
-              <v-list-item-avatar class="bg-success">
-                <v-icon>mdi-parking</v-icon>
-              </v-list-item-avatar>
-              <v-list-item-content class="pl-2">
-                <v-list-item-title>Estacionamentos</v-list-item-title>
-                <v-list-item-subtitle>Bike Friendly & 24/7</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-
-          <v-carousel
-            :show-arrows="false"
-            height="250px"
-          >
-            <v-carousel-item
-              v-for="(item,i) in items1"
-              :key="i"
-              eager
-            >
-              <v-img :src="item.src" height="100%" eager />
-            </v-carousel-item>
-          </v-carousel>
-          <v-system-bar lights-out />
-        </v-card>
-        <v-card
-          elevation="24"
-          max-width="25%"
-          class="mx-auto"
-        >
-          <v-list two-line>
-            <v-list-item>
-              <v-list-item-avatar class="bg-warning">
-                <v-icon>mdi-parking</v-icon>
-              </v-list-item-avatar>
-              <v-list-item-content class="pl-2">
-                <v-list-item-title>Bicicletarias</v-list-item-title>
-                <v-list-item-subtitle>Reparos e Trocas</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-
-          <v-carousel
-            :show-arrows="false"
-            height="250px"
-          >
-            <v-carousel-item
-              v-for="(item,i) in items2"
-              :key="i"
-              eager
-            >
-              <v-img :src="item.src" height="100%" eager />
-            </v-carousel-item>
-          </v-carousel>
-          <v-system-bar lights-out />
-        </v-card>
-        <v-card
-          elevation="24"
-          max-width="25%"
-          class="mx-auto"
-        >
-          <v-list two-line>
-            <v-list-item>
-              <v-list-item-avatar class="bg-info">
-                <v-icon>mdi-parking</v-icon>
-              </v-list-item-avatar>
-              <v-list-item-content class="pl-2">
-                <v-list-item-title>Segurança</v-list-item-title>
-                <v-list-item-subtitle>Segurar bens e comercios</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-
-          <v-carousel
-            :show-arrows="false"
-            height="250px"
-          >
-            <v-carousel-item
-              v-for="(item,i) in items3"
-              :key="i"
-              eager
-            >
-              <v-img :src="item.src" height="100%" eager />
-            </v-carousel-item>
-          </v-carousel>
-          <v-system-bar lights-out />
-        </v-card>
-      </div>
       <Particles
         id="particles-1"
         class="particles"
