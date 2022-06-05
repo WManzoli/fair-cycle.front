@@ -13,7 +13,6 @@
                       <span>&nbsp;</span>
                       <span>garagem?</span>
                       <span>manutenção?</span>
-                      <span>segurança?</span>
                       <span>seguros?</span>
                       <span>atendimento?</span>&nbsp;
                     </div>
@@ -223,7 +222,7 @@ export default {
   font-weight: normal;
 }
 .rw-words-2 span{
-  animation: rotateWordsSecond 10s linear infinite 0s;
+  animation: rotateWordsSecond 8s linear infinite 0s;
 }
 .rw-words span:nth-child(2) {
   animation-delay: 2s;
@@ -239,10 +238,6 @@ export default {
 }
 .rw-words span:nth-child(5) {
   animation-delay: 8s;
-  color: #fff;
-}
-.rw-words span:nth-child(6) {
-  animation-delay: 10s;
   color: #fff;
 }
 @keyframes rotateWordsSecond {
