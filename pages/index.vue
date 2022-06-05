@@ -29,12 +29,13 @@ import BackToTopButton from '~/components/BackToTopButton'
 // Animate CSS
 import 'animate.css'
 
-new BlipChat()
+window.blipClient = new BlipChat()
   .withAppKey('ZmFpcmN5Y2xlOmNiNzkyYjMzLTJlMzMtNDhkZi04NDRiLWI0YWZmMTAzODJhOQ==')
   .withButton({ height: '200px', color: '#fff', icon: 'https://blipmediastore.blob.core.windows.net/public-medias/Media_3c9fe1e9-a50d-4f51-bc4e-a5e6122711e0' })
   .withTarget('page-wrap')
   .withCustomCommonUrl('https://chat.blip.ai/')
-  .build()
+window.blipClient.build()
+
 // Bootstrap CSS
 require('~/assets/basic/assets/css/bootstrap.min.css')
 // Default CSS
@@ -78,7 +79,7 @@ export default {
   },
   head () {
     return {
-      title: 'Hello world',
+      title: 'Home',
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {

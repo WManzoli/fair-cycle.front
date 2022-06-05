@@ -153,6 +153,10 @@ p {
   transition: all 0.4s ease-out 0s;
   background: #000;
 }
+.main-btn:hover{
+  background: #c5c5c5;
+  color: #000000;
+}
 
 /*===== All SECTION TITLE Style =====*/
 .section-title .line {
@@ -530,6 +534,7 @@ p {
   transition: all 0.3s ease-out 0s; }
 
 .navbar-brand {
+  color: #fff;
   padding: 0; }
 
 .navbar-toggler {
@@ -1384,8 +1389,8 @@ p {
 .footer-area {
   background-position: top center;
   background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-  top: -100px;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+  top: -50px;
   position: relative;
   z-index: 5; }
 
@@ -1490,7 +1495,7 @@ p {
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s; }
     .copyright-content a:hover {
-      color: #000000; }
+      color: #fff; }
 
 /*===== BACK TO TOP =====*/
 .back-to-top {

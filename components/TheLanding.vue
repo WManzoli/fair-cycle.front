@@ -11,9 +11,10 @@
                     <div>
                       Precisando de
                       <span>&nbsp;</span>
-                      <span>segurança?</span>
-                      <span>manutenção?</span>
                       <span>garagem?</span>
+                      <span>manutenção?</span>
+                      <span>segurança?</span>
+                      <span>seguros?</span>
                       <span>atendimento?</span>&nbsp;
                     </div>
                   </div>
@@ -23,10 +24,11 @@
                 A Fair Cycle pode te ajudar !
               </h2>
               <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                Lorem ipsum dolor sit amet,
-                consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                Bike friendly spots for your issues pot.
               </p>
-              <a href="#" class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">Get Started</a>
+              <p class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s" @click="handleClick()">
+                Saber mais...
+              </p>
             </div> <!-- header hero content -->
           </div>
         </div> <!-- row -->
@@ -54,16 +56,17 @@ import Vue from 'vue'
 Vue.use(Particles)
 
 export default {
-  // data() {
-  //   return {
-  //     // currentWord: '',
-  //     // currentWordArray: ['Segurança', 'Atendimento', 'Manutenção', 'Garagem']
-  //   }
-  // },
-  // created(){
-  // },
-  // methods:{
-  // },
+  data () {
+    return {
+      // currentWord: '',
+      // currentWordArray: ['Segurança', 'Atendimento', 'Manutenção', 'Garagem']
+    }
+  },
+  methods: {
+    handleClick () {
+      window.setTimeout(function () { window.blipClient.toogleChat() })
+    }
+  }
 }
 </script>
 
@@ -91,7 +94,7 @@ export default {
   font-weight: normal;
 }
 .rw-words-2 span{
-  animation: rotateWordsSecond 8s linear infinite 0s;
+  animation: rotateWordsSecond 10s linear infinite 0s;
 }
 .rw-words span:nth-child(2) {
   animation-delay: 2s;
@@ -107,6 +110,10 @@ export default {
 }
 .rw-words span:nth-child(5) {
   animation-delay: 8s;
+  color: #fff;
+}
+.rw-words span:nth-child(6) {
+  animation-delay: 10s;
   color: #fff;
 }
 @keyframes rotateWordsSecond {

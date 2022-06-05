@@ -1,6 +1,6 @@
 <template>
   <footer id="footer" class="footer-area">
-    <div class="container">
+    <div class="container bg-cover">
       <div class="footer-copyright">
         <div class="row">
           <div class="col-lg-12">

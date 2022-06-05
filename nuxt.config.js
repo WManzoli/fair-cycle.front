@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - landing',
-    title: 'landing',
+    titleTemplate: '%s - FC',
+    title: 'Fair Cycle',
     htmlAttrs: {
       lang: 'en'
     },
