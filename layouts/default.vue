@@ -1,22 +1,22 @@
 <template>
-<!--  <div>-->
-<!--    <div class="preloader">-->
-<!--      <div class="loader">-->
-<!--        <div class="ytp-spinner">-->
-<!--          <div class="ytp-spinner-container">-->
-<!--            <div class="ytp-spinner-rotator">-->
-<!--              <div class="ytp-spinner-left">-->
-<!--                <div class="ytp-spinner-circle" />-->
-<!--              </div>-->
-<!--              <div class="ytp-spinner-right">-->
-<!--                <div class="ytp-spinner-circle" />-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-    <nuxt />
+  <!--  <div>-->
+  <!--    <div class="preloader">-->
+  <!--      <div class="loader">-->
+  <!--        <div class="ytp-spinner">-->
+  <!--          <div class="ytp-spinner-container">-->
+  <!--            <div class="ytp-spinner-rotator">-->
+  <!--              <div class="ytp-spinner-left">-->
+  <!--                <div class="ytp-spinner-circle" />-->
+  <!--              </div>-->
+  <!--              <div class="ytp-spinner-right">-->
+  <!--                <div class="ytp-spinner-circle" />-->
+  <!--              </div>-->
+  <!--            </div>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <nuxt />
 <!--  </div>-->
 </template>
 
@@ -56,7 +56,7 @@ export default {
 
     // WOW
     const wow = new WOW(
-      {live: false}
+      { live: false }
     )
     wow.init()
   }

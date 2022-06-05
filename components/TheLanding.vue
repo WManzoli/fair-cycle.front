@@ -1,10 +1,10 @@
 <template>
-  <header class="header-area">
+  <header class="header-area" style="background: #000">
     <div id="home" class="header-hero bg_cover">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12">
-            <div class="header-hero-content">
+            <div class="header-hero-content pb-200">
               <section class="wrapper">
                 <h2 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
                   <div class="rw-words rw-words-2">
@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
-              <img src="~/assets/basic/assets/images/header-hero.png" alt="hero">
+              <!--              <img src="~/assets/basic/assets/images/header-hero.png" alt="hero">-->
             </div> <!-- header hero image -->
           </div>
         </div> <!-- row -->
@@ -41,6 +41,7 @@
       <Particles
         id="particles-1"
         class="particles"
+        style="pointer-events: none !important;"
         url="particles.json"
       />
     </div> <!-- header hero -->
