@@ -1,8 +1,5 @@
 <template>
-  <div style="background: #fff;">
-    <TheNavbar />
-    <ThePanel />
-  </div>
+  <div style="background: #fff;" />
 </template>
 
 <script>

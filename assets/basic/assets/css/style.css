@@ -496,6 +496,8 @@ p {
 ===========================*/
 /*===== NAVBAR =====*/
 .navbar-area {
+  background: #fff;
+  color: #000;
   position: absolute;
   top: 0;
   left: 0;
@@ -534,7 +536,6 @@ p {
   transition: all 0.3s ease-out 0s; }
 
 .navbar-brand {
-  color: #fff;
   padding: 0; }
 
 .navbar-toggler {
@@ -594,6 +595,15 @@ p {
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 5px 12px; } }
 
+@media only screen and (min-width: 1200px)  {
+  .carousel{
+    max-width: 33%;
+
+  }
+  .carousel-card{
+    display: flex;
+  }
+}
 .navbar-nav .nav-item {
   margin-right: 45px;
   position: relative; }
@@ -745,9 +755,6 @@ p {
   position: absolute;
   top: 60px;
   right: 100px;
-}
-.carousel{
-  background-color: rgba(255,255,255,0.5) !important;
 }
 .navbar-btn .main-btn {
   height: 45px;

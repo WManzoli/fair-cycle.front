@@ -1,12 +1,12 @@
 <template>
   <header class="header-area">
-    <div class="navbar-area" :class="{ sticky: scrolled }">
+    <div class="navbar-area px-4" :class="{ sticky: scrolled }">
       <div class="container">
         <div class="row">
           <div class="w-100 pt-3">
             <nav class="d-flex justify-content-between">
-              <h1 class="navbar-brand" href="index.html" :style="`color:`+logo">
-                <img style="width: 6%" src="~/assets/basic/assets/images/logo.png" alt="Logo">&nbsp;- Fair Cycle
+              <h1 class="navbar-brand" href="index.html">
+                <img style="width: 3rem" src="~/assets/basic/assets/images/logo.png" alt="Logo">&nbsp;- Fair Cycle
               </h1>
 
               <div class="">
@@ -118,12 +118,6 @@ export default {
         required: value => !!value || 'Required.',
         min: v => v.length >= 8 || 'Minimo de 5 caracteres'
       }
-    }
-  },
-  computed: {
-    logo () {
-      return this.scrolled ? '#000' : '#fff'
-      // return this.scrolled ? require('~/assets/basic/assets/images/logo-png') : require('~/assets/basic/assets/images/logo-png')
     }
   },
   mounted () {

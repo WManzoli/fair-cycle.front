@@ -3,7 +3,7 @@
     <TheNavbar />
     <TheLanding />
     <TheFooter />
-    <BackToTopButton />
+    <!--    <BackToTopButton />-->
   </div>
 </template>
 
@@ -12,7 +12,7 @@ import { BlipChat } from 'blip-chat-widget'
 import TheNavbar from '@/components/TheNavbar'
 import TheLanding from '@/components/TheLanding'
 import TheFooter from '@/components/TheFooter'
-import BackToTopButton from '@/components/BackToTopButton'
+// import BackToTopButton from '@/components/BackToTopButton'
 import '../../node_modules/animate.css/animate.css'
 
 window.blipClient = new BlipChat()
@@ -33,8 +33,8 @@ export default {
   components: {
     TheNavbar,
     TheLanding,
-    TheFooter,
-    BackToTopButton
+    TheFooter
+    // BackToTopButton
 
   },
   head () {

@@ -1,6 +1,6 @@
 <template>
   <header class="header-area" style="background: #000">
-    <div id="home" class="header-hero bg_cover">
+    <div id="home" class="header-hero bg_cover px-5">
       <div class="container">
         <div class="row justify-content-center">
           <div class="w-100">
@@ -39,11 +39,10 @@
             </div> <!-- header hero image -->
           </div>
         </div> <!-- row -->
-        <div class="d-flex pb-50 mx-auto " style="gap: 1rem;">
+        <div class="pb-50 mx-auto carousel-card " style="gap: 1rem;">
           <v-card
-            class="carousel"
+            class="carousel my-2"
             elevation="24"
-            max-width="33%"
           >
             <v-list two-line>
               <v-list-item>
@@ -72,9 +71,8 @@
             <v-system-bar lights-out />
           </v-card>
           <v-card
-            class="carousel"
+            class="carousel my-2"
             elevation="24"
-            max-width="33%"
           >
             <v-list two-line>
               <v-list-item>
@@ -103,9 +101,8 @@
             <v-system-bar lights-out />
           </v-card>
           <v-card
-            class="carousel"
+            class="carousel my-2"
             elevation="24"
-            max-width="33%"
           >
             <v-list two-line>
               <v-list-item>
